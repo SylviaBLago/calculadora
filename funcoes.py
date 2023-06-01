@@ -24,8 +24,31 @@ def subtracao():
         sub = sub - numero3
         continuar = input(f'O resultado da subtração é: {sub}. Deseja continuar a subtrair? ')
     if continuar == 'não':
-        print(f'O resultado da sua subtração é {sub}. Recarregue a página para recomeçar. ')
+        print(f'O resultado da sua subtração é {sub}. ')
 
-subtracao()   
+def multiplicacao():
+    num1 = float(input('Qual numero deseja multiplicar? '))
+    num2 = float(input('Por qual numero deseja multiplicar? '))
+    mult = num1 * num2
 
-        
+    continuar = input(f'O resultado da multiplicação é: {mult}. Deseja continuar multiplicando? ')
+    while continuar == 'sim':
+        num3 = float(input(f'Por qual numero deseja multiplicar {mult}? '))
+        mult = mult * num3
+        continuar = input(f'O resultado da multiplicação é: {mult}. Deseja continuar multiplicando? ')
+    if continuar == 'não':
+        print(f'O resultado da multiplicação é {mult}')
+
+def divisao():
+    num1 = float(input('Qual numero a ser dividido? '))
+    num2  = float(input(f'Por quanto deseja dividir {num1}? '))
+    div = num1/num2
+
+    continuar = input(f'O resultado da divsão é: {div}. Deseja continuar dividindo? ')
+
+    while continuar == 'sim':
+        num3 = float(input(f'Por quanto deseja dividir {div}? '))
+        div = div / num3
+        continuar = input(f'O resultado da divsão é: {div}. Deseja continuar dividindo? ')
+    if continuar == 'não':
+        print(f'O resultado da sua divisão é {div}.')
